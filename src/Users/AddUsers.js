@@ -22,6 +22,8 @@ export default function AddUsers() {
                   <input type={"text"} className='form-control' placeholder="Enter your Email" name='name'/>
                 </div>
 
+                <button type='submit' className='btn btn-outline-primary' >Submit</button>
+
             </div>
         </div>
       
