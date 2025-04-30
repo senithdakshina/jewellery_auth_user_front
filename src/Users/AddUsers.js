@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function AddUsers() {
+  const[user,setUser] = useState({
+    name:"",
+    username:"",
+    email:""
+  })
+
+const{name,username,email} =user
+
   return (
     <div className='container'>
         <div className='row'>
@@ -9,17 +17,17 @@ export default function AddUsers() {
 
                 <div className='mb3'> 
                   <label htmlFor='Name' className='form-label'> Name</label>
-                  <input type={"text"} className='form-control' placeholder="Enter your name" name='name'/>
+                  <input type={"text"} className='form-control' placeholder="Enter your name" name='name' value={name}/>
                 </div>
 
                 <div className='mb3'> 
                   <label htmlFor='Username' className='form-label'> User name</label>
-                  <input type={"text"} className='form-control' placeholder="Enter your User name" name='name'/>
+                  <input type={"text"} className='form-control' placeholder="Enter your User name" name='name' value={username}/>
                 </div>
 
                 <div className='mb3'> 
                   <label htmlFor='Name' className='form-label'> Email</label>
-                  <input type={"text"} className='form-control' placeholder="Enter your Email" name='name'/>
+                  <input type={"text"} className='form-control' placeholder="Enter your Email" name='name' value={email}/>
                 </div>
 
                 <button type='submit' className='btn btn-outline-primary'>Submit</button>
