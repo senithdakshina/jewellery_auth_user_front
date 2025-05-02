@@ -14,10 +14,19 @@ export default function Home() {
         setUsers(result.data);
     };
 
-    const deleteUser = async (id)=>{
-      await axios.delete(`http://localhost:8080/user/${id}`)
-      loadUsers()
-    }
+    // const deleteUser = async (id)=>{
+    //   await axios.delete(`http://localhost:8080/user/${id}`)
+    //   loadUsers()
+    // }
+
+    const deleteUser = async (id) => {
+      const confirmDelete = window.confirm("Are you sure you want to delete this user?");
+      if (confirmDelete) {
+        await axios.delete(`http://localhost:8080/user/${id}`);
+        loadUsers();
+      }
+    };
+    
 
 
 
